@@ -43,4 +43,5 @@ Here is detail step which could help you do the same thing. The reason I choose 
     -	liveMedia.lib
     -	UsageEnvironment.lib
     -	ws2_32.lib
+  - Add " _CRT_SECURE_NO_WARNINGS" in Project setting -> C/C++ -> Preprocessor.
 
