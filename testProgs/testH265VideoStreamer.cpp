@@ -30,7 +30,7 @@ along with this library; if not, write to the Free Software Foundation, Inc.,
 #include <GroupsockHelper.hh>
 
 UsageEnvironment* env;
-char const* inputFileName = "test.265";
+char const* inputFileName = "slamtv60.264";
 H265VideoStreamFramer* videoSource;
 RTPSink* videoSink;
 
@@ -83,8 +83,8 @@ int main(int argc, char** argv) {
     exit(1);
   }
   ServerMediaSession* sms
-    = ServerMediaSession::createNew(*env, "testStream", inputFileName,
-		   "Session streamed by \"testH265VideoStreamer\"",
+    = ServerMediaSession::createNew(*env,"", inputFileName,
+		   "Session streamed by ",
 					   True /*SSM*/);
   sms->addSubsession(PassiveServerMediaSubsession::createNew(*videoSink, rtcp));
   rtspServer->addServerMediaSession(sms);
